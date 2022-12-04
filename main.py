@@ -11,8 +11,8 @@ count = st_autorefresh(interval=2000)
 
 st.title("Crypto Currency Price Tracker")
 st.subheader(
-    "This application tracks the live prices of Bitcoin, Dogecoin, and Ethereum. It is refreshed every 2 seconds.")
-st.caption("Created by Your Name")
+    "This application tracks the live prices of Bitcoin, Dogecoin, and Ethereum. Refreshed every 2 seconds.")
+st.caption("Created by Schoolhouse and LUC mentees")
 
 price_key = "https://api.binance.us/api/v3/ticker/price?symbol="
 crypto_types = {"Bitcoin": "BTCUSDT", "Dogecoin": "DOGEUSDT", "Ethereum": "ETHUSDT"}
