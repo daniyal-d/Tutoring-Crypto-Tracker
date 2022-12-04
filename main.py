@@ -14,7 +14,7 @@ st.subheader(
     "This application tracks the live prices of Bitcoin, Dogecoin, and Ethereum. It is refreshed every 2 seconds.")
 st.caption("Created by Your Name")
 
-price_key = "https://api.binance.com/api/v3/ticker/price?symbol="
+price_key = "https://api.binance.us/api/v3/ticker/price?symbol="
 crypto_types = {"Bitcoin": "BTCUSDT", "Dogecoin": "DOGEUSDT", "Ethereum": "ETHUSDT"}
 
 crypto_selection = st.selectbox("View price of a specific coin", crypto_types)
@@ -36,7 +36,7 @@ st.write(f"**TIME**: {exact_time} UTC")
 st.write(f"The current price of {crypto_selection} is **${coin_price_rounded}**")
 
 # Getting graph data
-candle_stick_key = "https://api.binance.com/api/v3/klines?symbol=" + crypto_types[crypto_selection] + "&interval=1m"
+candle_stick_key = "https://api.binance.us/api/v3/klines?symbol=" + crypto_types[crypto_selection] + "&interval=1m"
 candle_stick_data = requests.get(candle_stick_key)
 candle_stick_data = candle_stick_data.json()
 
