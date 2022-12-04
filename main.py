@@ -36,7 +36,7 @@ st.write(f"**TIME**: {exact_time} UTC")
 st.write(f"The current price of {crypto_selection} is **${coin_price_rounded}**")
 
 # Getting graph data
-candle_stick_key = "https://api.binance.us/api/v3/klines?symbol=" + crypto_types[crypto_selection] + "&interval=1m"
+candle_stick_key = "https://api.binance.us/api/v3/klines?symbol=" + crypto_types[crypto_selection] + "&interval=5m"
 candle_stick_data = requests.get(candle_stick_key)
 candle_stick_data = candle_stick_data.json()
 
